@@ -10,6 +10,7 @@
   --slate-text-color: #434455;
   --cloud-color: #f4f4fd;
   --cornflower-color: #e7e9fc;
+  --ocean-color: #404BBF;
 }
 
 body {
@@ -58,6 +59,7 @@ img {
   color: var(--white-color);
   background: var(--primary-brand-color);
   border-color: transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .visually-hidden {
@@ -95,6 +97,7 @@ img {
   margin-right: 77px;
   padding-top: 24px;
   padding-bottom: 24px;
+  display: flex;
 }
 
 .nav-logo__web {
@@ -153,13 +156,16 @@ img {
 }
 
 .promo {
+  max-width: 1440px;
+  margin: 0 auto;
   background: var(--dark-color);
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 188px;
+  padding-bottom: 188px;
   text-align: center;
   background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 
 }
 
@@ -185,7 +191,14 @@ img {
   background: var(--primary-brand-color);
   border: transparent;
   border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+}
+
+.promo__button:hover,
+.promo__button:focus {
+  background: var(--ocean-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .benefits {
@@ -206,7 +219,7 @@ img {
 .benefits-icon {
   width: 264px;
   height: 112px;
-  background: #F4F4FD;
+  background: var(--cloud-color);
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -314,7 +327,7 @@ img {
 .team-link {
   width: 40px;
   height: 40px;
-  color: #F4F4FD;
+  color: var(--cloud-color);
   border-radius: 50%;
   background: #4D5AE5;
   display: flex;
@@ -324,7 +337,7 @@ img {
 
 .team-link:hover,
 .team-link:focus {
-  background: #31D0AA;
+  background: var(--ocean-color);
 }
 
 .team-icon {
@@ -335,10 +348,11 @@ img {
 
 .customers {
   background: #FFFFFF;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .customers-title {
-  margin-top: 130px;
   margin-bottom: 72px;
   font-style: normal;
   font-weight: 700;
@@ -354,7 +368,6 @@ img {
   display: flex;
   justify-content: center;
   gap: 24px;
-  margin-bottom: 120px;
 }
 
 .customers-item {}
@@ -373,8 +386,8 @@ img {
 
 .customers-link:hover,
 .customers-link:focus {
-  color: #404BBF;
-  border: 1px solid #404BBF;
+  color: var(--ocean-color);
+  border: 1px solid var(--ocean-color);
 }
 
 .customers-icon {
@@ -397,18 +410,20 @@ img {
   width: 264px;
 }
 
+
+
 .footer-text-link {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: calc(21 / 18);
-  align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-decoration: none;
   color: var(--cloud-color);
   margin-bottom: 16px;
-  display: block;
+  display: flex;
 }
 
 .footer-text-paragraph {
@@ -444,8 +459,7 @@ img {
 .footer-social-link {
   width: 40px;
   height: 40px;
-  color: #F4F4FD;
-  ;
+  color: var(--cloud-color);
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   display: flex;
@@ -505,22 +519,25 @@ img {
   width: calc((100% - 48px) / 3);
 }
 
-.project-item:hover,
-.project-item:focus {
-  box-shadow: 0px 1px 6px rgb(46 47 66 / 8%);
+.projects-link:hover,
+.projects-link:focus {
+  border: 0.5px solid #F4F4FD;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .projects-link {
   display: flex;
   flex-direction: column;
+  border: 1px solid #E7E9FC;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 
 }
 
 .projects-content {
   padding: 32px 0 32px 16px;
-  border-right: 0.5px solid #f4f4fd;
+  /* border-right: 0.5px solid #f4f4fd;
   border-bottom: 0.5px solid #f4f4fd;
-  border-left: 0.5px solid #f4f4fd;
+  border-left: 0.5px solid #f4f4fd; */
 }
 
 .project-title {
